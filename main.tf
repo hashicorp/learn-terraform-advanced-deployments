@@ -44,8 +44,23 @@ module "lb_security_group" {
   ingress_cidr_blocks = ["0.0.0.0/0"]
 }
 
+data "aws_ami" "amazon_linux" {
+  most_recent = true
+  owners      = ["amazon"]
+
+  filter {
+    name   = "name"
+    values = ["amzn2-ami-hvm-*-x86_64-gp2"]
+  }
+}
+
+resource "random_pet" "app" {
+  length    = 2
+  separator = "-"
+}
+
 resource "aws_lb" "app" {
-  name               = "main-app-lb"
+  name               = "main-app-${random_pet.app.id}-lb"
   internal           = false
   load_balancer_type = "application"
   subnets            = module.vpc.public_subnets
@@ -60,16 +75,6 @@ resource "aws_lb_listener" "app" {
   default_action {
     type             = "forward"
     target_group_arn = aws_lb_target_group.blue.arn
-  }
-}
-
-data "aws_ami" "amazon_linux" {
-  most_recent = true
-  owners      = ["amazon"]
-
-  filter {
-    name   = "name"
-    values = ["amzn2-ami-hvm-*-x86_64-gp2"]
   }
 }
 
