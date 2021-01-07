@@ -77,7 +77,3 @@ resource "aws_lb_listener" "app" {
     target_group_arn = aws_lb_target_group.blue.arn
   }
 }
-
-output "lb_dns_name" {
-  value = aws_lb.app.dns_name
-}
