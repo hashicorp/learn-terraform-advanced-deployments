@@ -1,5 +1,5 @@
 resource "aws_instance" "blue" {
-  count = 2
+  count = var.enable_green_env ? var.blue_instance_count : 0
 
   ami                    = data.aws_ami.amazon_linux.id
   instance_type          = "t2.micro"

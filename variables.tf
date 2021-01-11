@@ -57,3 +57,15 @@ variable "private_subnet_cidr_blocks" {
     "10.0.108.0/24",
   ]
 }
+
+variable "enable_blue_env" {
+  description = "Enable blue environment"
+  type        = boolean
+  default     = true
+}
+
+variable "blue_instance_count" {
+  description = "Number of instances in blue environment"
+  type        = number
+  default     = 2
+}
