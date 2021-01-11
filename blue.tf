@@ -6,11 +6,11 @@ resource "aws_instance" "blue" {
   subnet_id              = module.vpc.public_subnets[count.index % length(module.vpc.public_subnets)]
   vpc_security_group_ids = [module.app_security_group.this_security_group_id]
   user_data = templatefile("${path.module}/init-script.sh", {
-    file_content = "version 1.0 #${count.index}"
+    file_content = "version 1.2 #${count.index}"
   })
 
   tags = {
-    Name = "version-1.0-${count.index}"
+    Name = "version-1.2-${count.index}"
   }
 }
 
