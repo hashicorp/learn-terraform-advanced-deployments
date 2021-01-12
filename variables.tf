@@ -60,7 +60,7 @@ variable "private_subnet_cidr_blocks" {
 
 variable "enable_blue_env" {
   description = "Enable blue environment"
-  type        = boolean
+  type        = bool
   default     = true
 }
 
@@ -72,7 +72,7 @@ variable "blue_instance_count" {
 
 variable "enable_green_env" {
   description = "Enable green environment"
-  type        = boolean
+  type        = bool
   default     = true
 }
 
