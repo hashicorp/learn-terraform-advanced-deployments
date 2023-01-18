@@ -2,20 +2,22 @@
 # Manual edits may be lost in future updates.
 
 provider "registry.terraform.io/hashicorp/aws" {
-  version     = "3.20.0"
-  constraints = ">= 2.42.0, >= 2.68.0, >= 3.20.0"
+  version     = "4.15.1"
+  constraints = ">= 2.42.0, >= 2.68.0, ~> 4.15.0"
   hashes = [
-    "h1:Wk7JYiEIslHQorVPWnofRNYUAjyro6IehY/d/Yfmbr8=",
-    "zh:1b53d410c21332750be561092d412d83014fa0656e00f940944d2e7b07b1b9ec",
-    "zh:307bf780790462fe547fe23f8e38a4c178437f3a9dd725f9aa63c6d8c6cbf25d",
-    "zh:5818a978b9766b23a190716b85aad3a4731d33ddb8a81080cf3ef6e4bd68a003",
-    "zh:5f68eb4779208e21d9657b9ff492aa5f6496efea7994bdec1d302f88b0b65f34",
-    "zh:6028208a7b3738801cd9f3376efa40a1e55f4bb8184584f7387b08c054e43c4c",
-    "zh:8130269e2d8c80ea9136dcd26cfeb4e1fac83bda4aab0db70f36651a7b22365d",
-    "zh:9dd4a07beb89606e051b64ab05d75e1c1616389871a55065676b370aebaed8e5",
-    "zh:b7194500db431ba862ea8008db56a5decececda1f904ed8842d2b0f1a04eea9d",
-    "zh:ec214b7341137e6dd47754b843ed16fe3e1d32832537042ee81a64a3ccdbb4bd",
-    "zh:ec2973e04f3cb853895e51f6ec56660574610b860ee3de669ccbb1f04d1089c9",
+    "h1:leEZu+Kv9JIvGpt8SfFkjftdR8KrFMkbUMQVnH0kvFk=",
+    "zh:1d944144f8d613b8090c0c8391e4b205ca036086d70aceb4cdf664856fa8410c",
+    "zh:2a0ca16a6b12c0ac509f64512f80bd2ed6e7ea0ec369212efd4be3fa65e9773d",
+    "zh:3f9efdce4f1c320ffd061e8715e1d031deac1be0b959eaa60c25a274925653e4",
+    "zh:4cf82f3267b0c3e08be29b0345f711ab84ea1ea75f0e8ce81f5a2fe635ba67b4",
+    "zh:58474a0b7da438e1bcd53e87f10e28830836ff9b46cce5f09413c90952ae4f78",
+    "zh:6eb1be8afb0314b6b8424fe212b13beeb04f3f24692f0f3ee86c5153c7eb2e63",
+    "zh:8022da7d3b050d452ce6c679844e13729bdb4e1b3e75dcf68931af17a06b9277",
+    "zh:8e2683d00fff1df43440d6e7c04a2c1eb432c7d5dacff32fe8ce9045bc948fe6",
+    "zh:9b12af85486a96aedd8d7984b0ff811a4b42e3d88dad1a3fb4c0b580d04fa425",
+    "zh:b0c22d9a306e8ac2de57b5291a3d0a7a2c1713e33b7d076005662451afdc4d29",
+    "zh:ba6b7d7d91388b636145b133da6b4e32620cdc8046352e2dc8f3f0f81ff5d2e2",
+    "zh:d38a816eb60f4419d99303136a3bb61a0d2df3ca8a1dce2ced9b99bf23efa9f7",
   ]
 }
 
