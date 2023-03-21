@@ -6,14 +6,14 @@ resource "aws_instance" "blue" {
 
   ami                    = data.aws_ami.amazon_linux.id
   instance_type          = "t2.micro"
-  subnet_id              = module.vpc.public_subnets[count.index % length(module.vpc.public_subnets)]
+  subnet_id              = module.vpc.private_subnets[count.index % length(module.vpc.private_subnets)]
   vpc_security_group_ids = [module.app_security_group.security_group_id]
   user_data = templatefile("${path.module}/init-script.sh", {
     file_content = "version 1.0 - #${count.index}"
   })
 
   tags = {
-    Name = "version-1.0-${count.index}"
+    Name = "blue-${count.index}"
   }
 }
 
